@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Archivos/Archivos.iml" filepath="$PROJECT_DIR$/Archivos/Archivos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Java-Jobs.iml" filepath="$PROJECT_DIR$/.idea/Java-Jobs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NewSM/NewSM.iml" filepath="$PROJECT_DIR$/NewSM/NewSM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SnackMachine/SnackMachine.iml" filepath="$PROJECT_DIR$/SnackMachine/SnackMachine.iml" />
+    </modules>
+  </component>
+</project>
