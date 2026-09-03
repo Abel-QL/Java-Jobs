@@ -1,6 +1,6 @@
-package Services;
+package src.Services;
 
-import Domain.Snack;
+import src.Domain.Snack;
 
 import java.util.List;
 

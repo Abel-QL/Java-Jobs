@@ -1,10 +1,9 @@
-package Presentation;
+package src.Presentation;
 
 
-import Domain.Snack;
-import Services.FileServicesSnack;
-import Services.IServiceSnacks;
-import Services.ServiceSnacksList;
+import src.Domain.Snack;
+import src.Services.FileServicesSnack;
+import src.Services.IServiceSnacks;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -12,6 +12,7 @@ public class SnacksMachine {
         var exit = false;
         var console = new Scanner(System.in);
         //lista de productos niiga
+        List<Snack> snacks = new ArrayList<>();
         System.out.println("--- PUNTO DE DROGA DYLON BABY 69 ---");
         Snacks.showSnacks();
         while (!exit) {
@@ -35,6 +36,7 @@ public class SnacksMachine {
                 +----------------------------+
                 | 1. Buy snack               |
                 | 2. Show ticket             |
+                | 3. Add new Snack           |
                 | 4. EXIT                    |
                 +----------------------------+
                 Pick an option:\s""");
@@ -42,6 +44,7 @@ public class SnacksMachine {
     }
 
     private static boolean execOptions(int option, Scanner console,
+                                       List<Snack> snacks) {
         var exit = false;
         switch (option) {
             case 1 -> buySnack(console, snacks);
@@ -52,6 +55,7 @@ public class SnacksMachine {
         return exit;
     }
 
+    private static void buySnack(Scanner console, List<Snack> snacks) {
         System.out.print("¿Que te quiere meter hoy? ");
         var snackId = Integer.parseInt(console.nextLine());
         var snackFound = false;
@@ -68,8 +72,10 @@ public class SnacksMachine {
         }
     }
 
+    private static void showSnacks(List<Snack> snacks) {
         StringBuilder ticket = new StringBuilder("--- TOTAL DE VENTA ---");
         var total = 0.00;
+        for (Snack snack : snacks) {
             ticket.append("\n\t- ").append(snack.getSnackName()).append(" - Price: ").append(snack.getSnackPrice()).append(" RD$");
             total += snack.getSnackPrice();
         }
@@ -78,9 +84,11 @@ public class SnacksMachine {
     }
 
     private static void addSnacks(Scanner console) {
+        System.out.print("Nombre del Snack: ");
         var snackName = console.nextLine();
         System.out.print("Precio: ");
         var snackPrice = Double.parseDouble(console.nextLine());
+        Snacks.AddSnack(new Snack(snackName, snackPrice));
         System.out.println("Tu mierda se agrego al punto");
         Snacks.showSnacks();
     }
