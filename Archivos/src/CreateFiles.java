@@ -8,16 +8,16 @@ public class CreateFiles {
         var nameFile = "MiPrimerArchivo.txt";
         var file = new File(nameFile);
         try {
-        if (file.exists()) {
-            System.out.println("El archivo ya existe brother, create otro o ponle otro nombre");
-        }else   {
-            var output = new PrintWriter(new FileWriter(file));
-            output.close();
-            System.out.println("se creo el archivo en: ");
-        }
-    } catch (IOException e) {
+            if (file.exists()) {
+                System.out.println("El archivo ya existe brother, create otro o ponle otro nombre");
+            } else {
+                var output = new PrintWriter(new FileWriter(file));
+                output.close();
+                System.out.println("se creo el archivo en: ");
+            }
+        } catch (IOException e) {
             System.out.println("Error al crear el archivo " + e);
         }
     }
-    }
+}
 

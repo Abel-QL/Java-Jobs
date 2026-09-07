@@ -1,6 +1,6 @@
-package Services;
+package src.Services;
 
-import Domain.Snack;
+import src.Domain.Snack;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -8,7 +8,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FileServicesSnack implements IServiceSnacks {
+public class FileServicesSnack implements src.Services.IServiceSnacks {
     private static final String FILE_NAME = "Snacks.txt";
 
     private final List<Snack> snacks = new ArrayList<>();
